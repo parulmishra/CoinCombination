@@ -1,0 +1,18 @@
+@using System.Collections.Generic;
+@{
+  Layout = "_Layout";
+}
+<div class="jumbotron">
+<h1>Here is your Result</h1>
+  <div>
+  @if(Model != null)
+  {
+    foreach(KeyValuePair<string,int> coin in Model.GetCombination())
+    {
+      <p>@coin.Value @coin.Key</p>
+    }
+  }
+</div>
+
+<a href="/"><button class="btn btn-lg btn-primary">  Home</button></a>
+</div>
